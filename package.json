@@ -2,18 +2,15 @@
   "name": "cypress-spellchecker",
   "version": "1.0.0",
   "description": "Cypress-spellchecker is a cypress custom command to check spelling/ typo error on a webpage.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Bot-Arpit/Cypress-spellchecker.git"
   },
   "keywords": [
-    "Cypress",
-    "spell",
-    "checker"
+    "Cypress spell checker",
+    "spell checker",
+    "spell-check"
   ],
   "author": "Bot-Arpit",
   "license": "MIT",
