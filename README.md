@@ -1,5 +1,5 @@
 # Cypress-spellchecker
-This is a Cypress custom file download command.
+This is a Cypress custom command to check spelling.
 
 This repository is used to check common spelling error on a webpage. 
 
