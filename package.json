@@ -1,8 +1,7 @@
 {
   "name": "cypress-spellchecker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cypress-spellchecker is a cypress custom command to check spelling/ typo error on a webpage.",
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Bot-Arpit/Cypress-spellchecker.git"
