@@ -6,9 +6,13 @@ const fs = require('fs')
 module.exports =(on)=>{
     on('task', {
 	    checkspell(value) {  
-             let filename = value.reportName.replaceAll(/\s/g,'_').trim()
-            if(filename == ""){
+            let filename = value.reportName
+            if(filename == "" || filename == undefined || filename == null){
                 filename = 'Result'
+            }
+            else
+            {
+                 filename = value.reportName.replaceAll(/\s/g,'_').trim()
             }
              if (!fs.existsSync('cypress/spell-check')) {
                 fs.mkdirSync('cypress/spell-check')
@@ -17,7 +21,7 @@ module.exports =(on)=>{
                 const $ = cheerio.load(value.data)
                 spell.load('en')
                 //Putting  all Html Tags in Array   
-                const Tags = ["tr","h1","h3","h4","h5","ul","li"]
+                const Tags = ["tr","h1","h2","h3","h4","h5","h6","ul","li","br","a","q","p"]
 
 
                 for (var iter = 0; iter < Tags.length; iter++) {
@@ -33,7 +37,7 @@ module.exports =(on)=>{
 
                                     if (hasNumbers(check[k]) == false && isValid(check[k])) {
                                         try{
-                                        fs.appendFileSync('cypress/spell-check/'+ filename, check[k] + "\n")
+                                        fs.appendFileSync('cypress/spell-check/'+ filename + '.txt', check[k] + "\n")
                                         }
                                         catch(err){
                                             console.error(err)
@@ -49,7 +53,7 @@ module.exports =(on)=>{
                 }
             function message(filename)
             {
-                if(fs.existsSync('cypress/spell-check/'+filename)){
+                if(fs.existsSync('cypress/spell-check/'+filename + '.txt')){
                     return 'Spell check complete check result : cypress/spell-check/' + filename + '.txt'
                 }
                 else
