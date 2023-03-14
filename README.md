@@ -8,7 +8,7 @@ This repository is used to check common spelling error on a webpage.
 Install the module.
 
 ```shell
-npm install Cypress-spellchecker
+npm install cypress-spellchecker
 ```
 
 Add the following line to `cypress/support/commands.js`.
