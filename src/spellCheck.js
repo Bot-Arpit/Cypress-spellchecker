@@ -10,10 +10,7 @@ module.exports =(on)=>{
             if(filename == "" || filename == undefined || filename == null){
                 filename = 'Result'
             }
-            else
-            {
-                 filename = value.reportName.replaceAll(/\s/g,'_').trim()
-            }
+            
              if (!fs.existsSync('cypress/spell-check')) {
                 fs.mkdirSync('cypress/spell-check')
                 }
