@@ -39,7 +39,7 @@ module.exports = defineConfig({
 cy.spellCheck('https://en.wikipedia.org/wiki/Wikipedia:Lists_of_common_misspellings')
 ```
 
-## With Filename
+### With Filename
 
 ```javascript
 cy.spellCheck('https://en.wikipedia.org/wiki/Wikipedia:Lists_of_common_misspellings','filename')
